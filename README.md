@@ -46,6 +46,7 @@ A Django REST Framework-based API for managing student information in a student 
    ```
 
 5. Run the development server:
+
    ```bash
    python manage.py runserver
    ```
@@ -54,6 +55,59 @@ A Django REST Framework-based API for managing student information in a student 
 
 - Access the API at `http://127.0.0.1:8000/`.
 - Use tools like Postman to test the endpoints.
+
+## Folder Structure
+
+```text
+student-portal-api/
+├── LICENSE
+├── README.md
+├── docs/
+│   └── images/
+├── src/
+│   ├── manage.py
+│   ├── student_portal/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   └── asgi.py
+│   ├── students/
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   ├── static/
+│   └── templates/
+├── requirements.txt
+```
+
+- **LICENSE**: Contains the license information for the project.
+- **README.md**: Project documentation and setup instructions.
+- **docs/**: Documentation-related files.
+  - **images/**: Images used in the documentation.
+- **src/**: Source code for the Django project.
+  - **manage.py**: Django's command-line utility for administrative tasks.
+  - **student_portal/**: Main project folder containing settings and configurations.
+    - **settings.py**: Configuration for the project.
+    - **urls.py**: URL routing for the project.
+    - **wsgi.py**: Entry point for WSGI-compatible web servers.
+    - **asgi.py**: Entry point for ASGI-compatible web servers.
+  - **students/**: App for managing student-related features.
+    - **models.py**: Database models for the app.
+    - **serializers.py**: Serializers for converting data to/from JSON.
+    - **views.py**: Views for handling API requests.
+    - **tests.py**: Test cases for the app.
+    - **admin.py**: Admin interface configurations.
+    - **apps.py**: App configuration.
+    - **migrations/**: Database migration files.
+  - **static/**: Static files (CSS, JavaScript, images).
+  - **templates/**: HTML templates for the project.
+- **requirements.txt**: List of dependencies for the project.
 
 ## Contributing
 
