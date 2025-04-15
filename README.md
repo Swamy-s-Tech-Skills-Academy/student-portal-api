@@ -200,6 +200,28 @@ student-portal-api/
   - **apps.py**: App configuration.
   - **migrations/**: Database migration files.
 
+## API Endpoints
+
+### Students List Endpoint
+
+- **URL**: `/students/`
+- **Method**: GET
+- **Description**: Retrieves a list of all students.
+- **Response**:
+
+  ```json
+  [
+    { "name": "John Doe", "age": 20 },
+    { "name": "Jane Smith", "age": 22 },
+    { "name": "Alice Johnson", "age": 19 }
+  ]
+  ```
+
+- **Example Request**:
+  ```bash
+  curl -X GET http://127.0.0.1:8000/students/
+  ```
+
 ## Usage
 
 - Access the API at `http://127.0.0.1:8000/`.
