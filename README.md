@@ -27,9 +27,9 @@ A Django REST Framework-based API for managing student information in a student 
 2. Create and activate a virtual environment:
 
    ```bash
-   python -m venv env
-   env\Scripts\activate  # On Windows
-   source env/bin/activate  # On macOS/Linux
+   python -m venv .venv
+   .venv\Scripts\activate  # On Windows
+   source .venv/bin/activate  # On macOS/Linux
    ```
 
 3. Install dependencies:
