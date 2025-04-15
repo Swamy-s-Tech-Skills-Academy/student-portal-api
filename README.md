@@ -30,22 +30,36 @@ A Django REST Framework-based API for managing student information in a student 
    python -m venv .venv
    .venv\Scripts\activate  # On Windows
    source .venv/bin/activate  # On macOS/Linux
+   pip freeze  # Should show no packages installed
    ```
 
 3. Install dependencies:
 
    ```bash
+   pip install django
+   pip install --upgrade pip
+   pip install djangorestframework
    pip install -r requirements.txt
    ```
 
-4. Apply migrations:
+4. Create the Django project:
+
+> 1. (.venv) PS D:\STSA\student-portal-api\src>
+> 2. Create a new Django project
+
+```bash
+    django-admin startproject student_portal_main .
+    cd src
+```
+
+1. Apply migrations:
 
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-5. Run the development server:
+2. Run the development server:
 
    ```bash
    python manage.py runserver
