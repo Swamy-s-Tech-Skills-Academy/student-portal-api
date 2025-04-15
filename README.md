@@ -112,6 +112,8 @@ To create the `students` app for managing student-related features, follow these
 
 6. Create views, serializers, and URLs for the `students` app as needed.
 
+> 1. [Students endpoints](http://127.0.0.1:8000/students/) - This URL will be used to access the student portal.
+
 ## Creating the "api" App
 
 To create the `api` app for managing API-related logic, follow these steps:
@@ -147,6 +149,8 @@ To create the `api` app for managing API-related logic, follow these steps:
    ```
 
 6. Organize API versions (if needed) by creating subdirectories within the `api` app, such as `api/v1/` or `api/v2/`.
+
+> 1. [Students endpoints](http://127.0.0.1:8000/api/v1/students/) - This URL will be used to access the API endpoints for the `students` app.
 
 ## Folder Structure After Adding the "api" App
 
