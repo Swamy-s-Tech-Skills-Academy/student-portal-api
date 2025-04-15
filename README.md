@@ -76,6 +76,42 @@ A Django REST Framework-based API for managing student information in a student 
    python manage.py runserver
    ```
 
+## Creating the "students" App
+
+To create the `students` app for managing student-related features, follow these steps:
+
+1. Navigate to the `src` directory:
+
+   ```bash
+   cd src
+   ```
+
+2. Create the `students` app using Django's `startapp` command:
+
+   ```bash
+   python manage.py startapp students
+   ```
+
+3. Add the `students` app to the `INSTALLED_APPS` list in `student_portal_main/settings.py`:
+
+   ```python
+   INSTALLED_APPS = [
+       ...existing apps...
+       'students',
+   ]
+   ```
+
+4. Define models for the `students` app in `students/models.py`.
+
+5. Run migrations to apply any changes:
+
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+6. Create views, serializers, and URLs for the `students` app as needed.
+
 ## Usage
 
 - Access the API at `http://127.0.0.1:8000/`.
