@@ -15,6 +15,10 @@ A Django REST Framework-based API for managing student information in a student 
 - Django 5.0
 - Django REST Framework
 
+## Reference(s)
+
+> 1. [Django REST Framework](https://www.django-rest-framework.org/)
+
 ## Installation
 
 1. Clone the repository:
@@ -39,6 +43,7 @@ A Django REST Framework-based API for managing student information in a student 
    pip install django
    pip install --upgrade pip
    pip install djangorestframework
+   pip freeze # It should show the installed packages
    pip freeze > requirements.txt
    ```
 
