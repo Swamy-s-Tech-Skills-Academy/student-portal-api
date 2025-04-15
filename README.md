@@ -112,6 +112,90 @@ To create the `students` app for managing student-related features, follow these
 
 6. Create views, serializers, and URLs for the `students` app as needed.
 
+## Creating the "api" App
+
+To create the `api` app for managing API-related logic, follow these steps:
+
+1. Navigate to the `src` directory:
+
+   ```bash
+   cd src
+   ```
+
+2. Create the `api` app using Django's `startapp` command:
+
+   ```bash
+   python manage.py startapp api
+   ```
+
+3. Add the `api` app to the `INSTALLED_APPS` list in `student_portal_main/settings.py`:
+
+   ```python
+   INSTALLED_APPS = [
+       ...existing apps...
+       'api',
+   ]
+   ```
+
+4. Define serializers, views, and URLs for the `api` app as needed.
+
+5. Run migrations to apply any changes (if models are added):
+
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+6. Organize API versions (if needed) by creating subdirectories within the `api` app, such as `api/v1/` or `api/v2/`.
+
+## Folder Structure After Adding the "api" App
+
+```text
+student-portal-api/
+├── LICENSE
+├── README.md
+├── docs/
+│   └── images/
+├── src/
+│   ├── manage.py
+│   ├── student_portal/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   └── asgi.py
+│   ├── students/
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   ├── api/
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   ├── static/
+│   └── templates/
+├── requirements.txt
+```
+
+- **api/**: App for managing API-related logic.
+  - **models.py**: Database models for the app (if needed).
+  - **serializers.py**: Serializers for converting data to/from JSON.
+  - **views.py**: Views for handling API requests.
+  - **tests.py**: Test cases for the app.
+  - **admin.py**: Admin interface configurations.
+  - **apps.py**: App configuration.
+  - **migrations/**: Database migration files.
+
 ## Usage
 
 - Access the API at `http://127.0.0.1:8000/`.
@@ -142,6 +226,15 @@ student-portal-api/
 │   │   ├── serializers.py
 │   │   ├── tests.py
 │   │   └── views.py
+│   ├── api/
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   └── views.py
 │   ├── static/
 │   └── templates/
 ├── requirements.txt
@@ -160,6 +253,14 @@ student-portal-api/
     - **asgi.py**: Entry point for ASGI-compatible web servers.
   - **students/**: App for managing student-related features.
     - **models.py**: Database models for the app.
+    - **serializers.py**: Serializers for converting data to/from JSON.
+    - **views.py**: Views for handling API requests.
+    - **tests.py**: Test cases for the app.
+    - **admin.py**: Admin interface configurations.
+    - **apps.py**: App configuration.
+    - **migrations/**: Database migration files.
+  - **api/**: App for managing API-related logic.
+    - **models.py**: Database models for the app (if needed).
     - **serializers.py**: Serializers for converting data to/from JSON.
     - **views.py**: Views for handling API requests.
     - **tests.py**: Test cases for the app.
