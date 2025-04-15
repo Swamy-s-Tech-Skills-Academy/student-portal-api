@@ -39,10 +39,16 @@ A Django REST Framework-based API for managing student information in a student 
    pip install django
    pip install --upgrade pip
    pip install djangorestframework
+   pip freeze > requirements.txt
+   ```
+
+4. Install dependencies from `requirements.txt`:
+
+   ```bash
    pip install -r requirements.txt
    ```
 
-4. Create the Django project:
+5. Create the Django project:
 
 > 1. (.venv) PS D:\STSA\student-portal-api\src>
 > 2. Create a new Django project
@@ -52,14 +58,14 @@ A Django REST Framework-based API for managing student information in a student 
     cd src
 ```
 
-1. Apply migrations:
+6. Apply migrations:
 
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-2. Run the development server:
+7. Run the development server:
 
    ```bash
    python manage.py runserver
