@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
 
 urlpatterns = [
+    path('', home, name='home'),  # Added root URL mapping
     path('admin/', admin.site.urls),
     # Web application endpoints
     path('students/', include('students.urls')),
