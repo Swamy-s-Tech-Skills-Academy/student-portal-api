@@ -76,6 +76,16 @@ A Django REST Framework-based API for managing student information in a student 
    python manage.py runserver
    ```
 
+### Create a Superuser
+
+To create a superuser for accessing the Django admin interface, run the following command:
+
+```bash
+python manage.py createsuperuser
+```
+
+![Create Superuser](docs/images/CreateSuperUser.png)
+
 ## Creating the "students" App
 
 To create the `students` app for managing student-related features, follow these steps:
