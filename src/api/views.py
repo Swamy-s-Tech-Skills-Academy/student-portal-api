@@ -9,4 +9,6 @@ def students_view(request):
     students = Student.objects.all()
     print(students)
 
-    return JsonResponse(list(students.values()), safe=False)
+    # Manually convert the queryset to a list of dictionaries for JSON serialization
+    students_list = list(students.values())
+    return JsonResponse(students_list, safe=False)
