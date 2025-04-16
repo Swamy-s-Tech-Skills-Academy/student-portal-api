@@ -6,6 +6,7 @@ from students.models import Student
 
 
 def students_view(request):
-    students = list(Student.objects.values())
+    students = Student.objects.all()
+    print(students)
 
-    return JsonResponse(students, safe=False)
+    return JsonResponse(list(students.values()), safe=False)
