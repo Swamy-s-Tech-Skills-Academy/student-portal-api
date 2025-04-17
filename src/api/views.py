@@ -9,15 +9,18 @@ from rest_framework.decorators import api_view
 # Create your views here.
 
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def students_view(request):
     if request.method == 'GET':
-        # retrieve all students from the Student table
         students = Student.objects.all()
-        # serialize the data using the StudentSerializer
         serializer = StudentSerializer(students, many=True)
-        # return the serialized data as JSON response
         return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == 'POST':
+        serializer = StudentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 def students_view_manual(request):
