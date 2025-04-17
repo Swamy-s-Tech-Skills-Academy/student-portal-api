@@ -123,6 +123,7 @@ To create the `students` app for managing student-related features, follow these
 6. Create views, serializers, and URLs for the `students` app as needed.
 
 > 1. [Students endpoints](http://127.0.0.1:8000/students/) - This URL will be used to access the student portal.
+> 2. [Manual Serialization endpoint](http://127.0.0.1:8000/studentsmanual/) - This URL will be used to access the manual serialization of students.
 
 ## Creating the "api" App
 
