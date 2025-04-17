@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse
 from students.models import Student
 from .serializers import StudentSerializer
@@ -26,7 +26,7 @@ def students_view(request):
 @api_view(['GET'])
 def student_detail_view(request, student_id):
     try:
-        student = Student.objects.get(student_id=student_id)
+        student = get_object_or_404(Student, student_id=student_id)
     except Student.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
