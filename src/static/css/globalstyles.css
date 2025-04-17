@@ -1,0 +1,51 @@
+/* website/static/globalstyles.css */
+
+/* Global font and basic styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* Paragraphs, spans, buttons, inputs, textarea */
+p,
+span,
+button,
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Custom scrollbar styling for chat-box (if applicable) */
+#chatArea::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chatArea::-webkit-scrollbar-thumb {
+    background-color: oklch(79.5% 0.184 86.047);
+    /* bg-yellow-700 */
+    border-radius: 6px;
+}
+
+#chatArea::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(55.4% 0.135 66.442);
+    /* bg-yellow-700 */
+}
+
+.active-tab {
+    background-color: oklch(55.4% 0.135 66.442);
+    /* bg-yellow-700 */
+    color: white;
+    border-right: 1px solid white;
+}
