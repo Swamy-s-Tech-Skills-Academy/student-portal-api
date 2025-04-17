@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',   # Added Django REST framework. Serializers and views will be created in the api app.
+    # Added Django REST framework. Serializers and views will be created in the api app.
+    'rest_framework',
     'students',
     'api',
 ]
