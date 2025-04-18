@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Details{% endblock %}
+
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Student Details</h1>
+<div class="bg-white shadow-md rounded-lg p-6">
+    <p><strong>ID:</strong> {{ student.student_id }}</p>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>Age:</strong> {{ student.age }}</p>
+    <p><strong>Batch:</strong> {{ student.batch }}</p>
+</div>
+<a href="/students" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Back to Students</a>
+{% endblock %}
